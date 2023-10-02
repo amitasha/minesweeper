@@ -6,6 +6,7 @@ using namespace std;
 #define BEGINNER 0
 #define INTERMEDIATE 1
 #define ADVANCED 2
+#define SUPER 3
 #define MAXSIDE 25
 #define MAXMINES 99
 #define MOVESIZE 526 // (25 * 25 - 99)
@@ -466,6 +467,7 @@ void chooseDifficultyLevel ()
 	printf ("Press 0 for BEGINNER (9 * 9 Cells and 10 Mines)\n");
 	printf ("Press 1 for INTERMEDIATE (16 * 16 Cells and 40 Mines)\n");
 	printf ("Press 2 for ADVANCED (24 * 24 Cells and 99 Mines)\n");
+	printf ("Press 3 for SUPER (48 * 48 Cells and 120 Mines)\n");
 
 	scanf ("%d", &level);
 
@@ -485,6 +487,12 @@ void chooseDifficultyLevel ()
 	{
 		SIDE = 24;
 		MINES = 99;
+	}
+
+	 if (level == SUPER)
+	{
+		SIDE = 48;
+		MINES = 120;
 	}
 
 	return;
